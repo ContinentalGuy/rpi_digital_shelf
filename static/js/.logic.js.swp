@@ -1,0 +1,288 @@
+2.2.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.24.0), libgtk2.0-0 (>= 2.8.0), libncurses5 (>= 6), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpangoft2-1.0-0 (>= 1.14.0), libsdl1.2debian (>= 1.2.11), libtinfo5 (>= 6)
+Recommends: pulseaudio-esound-compat | esound
+Homepage: http://dopewars.sourceforge.net
+Priority: extra
+Section: games
+Filename: pool/main/d/dopewars/dopewars_1.5.12-18_armhf.deb
+Size: 124752
+SHA256: ff1d9ed664f0152ed69ab17fff8dad2c6e2d5272f689dcdb871d41af0911eaf2
+SHA1: 11e2b41c94ef5ecaee7587ed6db6503a38a2f54c
+MD5sum: a2ddd88b1305a9947fa5dd839d35f7b6
+Description: drug-dealing game set in streets of New York City
+ UNIX rewrite of the MS-DOS program of the same name, which in turn was
+ inspired by John E. Dell's "Drug Wars" game. You have one month to buy and
+ sell drugs on the streets of New York, the aim being first to pay off your
+ debt to the loan shark and then to make a fortune. And if you have to shoot
+ a few cops in the process, well... The game includes TCP networking allowing
+ you to meet (and shoot) other human drug dealers.
+
+Package: dopewars-data
+Source: dopewars
+Version: 1.5.12-18
+Installed-Size: 981
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: all
+Size: 300342
+SHA256: 4c5fc6d07d43cc54c792fc72e4e41128220f49bdda852fb54670d24e61fca8dd
+SHA1: 67b0233d0767cfa2f4ef6078114e56db395df37f
+MD5sum: 02dd3f3122b821240b4e9222ffe149a8
+Description: drug-dealing game set in streets of New York City - data files
+ UNIX rewrite of the MS-DOS program of the same name, which in turn was
+ inspired by John E. Dell's "Drug Wars" game. You have one month to buy and
+ sell drugs on the streets of New York, the aim being first to pay off your
+ debt to the loan shark and then to make a fortune. And if you have to shoot
+ a few cops in the process, well... The game includes TCP networking allowing
+ you to meet (and shoot) other human drug dealers.
+ .
+ This package contains the required data files common to all architectures.
+Homepage: http://dopewars.sourceforge.net
+Tag: role::app-data
+Section: games
+Priority: extra
+Filename: pool/main/d/dopewars/dopewars-data_1.5.12-18_all.deb
+
+Package: dos2unix
+Version: 7.3.4-3
+Architecture: armhf
+Maintainer: Jari Aalto <jari.aalto@cante.net>
+Installed-Size: 1243
+Depends: libc6 (>= 2.4)
+Conflicts: tofrodos (<< 1.7.8.debian.1)
+Multi-Arch: foreign
+Homepage: https://waterlan.home.xs4all.nl/dos2unix.html
+Priority: extra
+Section: text
+Filename: pool/main/d/dos2unix/dos2unix_7.3.4-3_armhf.deb
+Size: 365070
+SHA256: 16f2d2a21b150e3090cd6f936b854fe68540ff5746268f2f887d84a810285c13
+SHA1: 236ec714f941743f80c9791df724b0620a3ec4dd
+MD5sum: fedf913a9c489752f3183cd66dbcd185
+Description: convert text file line endings between CRLF and LF
+ This package contains utilities dos2unix, unix2dos, mac2unix,
+ unix2mac to convert the line endings of text files between UNIX (LF),
+ DOS (CRLF) and Mac (CR) formats.
+ .
+ Text files under Windows and DOS typically have two ASCII characters
+ at the end of each line: CR (carriage return) followed by LF (line
+ feed). Older Macs used just CR, while UNIX uses just LF. While most
+ modern editors can read all these formats, there may still be a need
+ to convert files between them.
+ .
+ This is the classic utility developed in 1989.
+
+Package: dosage
+Version: 2.15-2
+Installed-Size: 938
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Depends: python-requests, python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Suggests: python-argcomplete
+Size: 265042
+SHA256: 81b9d34d90ba20afd73ecdd1272e08d290b7f46a002c92c3df16d00c290202af
+SHA1: 736d8470cc19e948ea8db4e782b02ebfd9880696
+MD5sum: 7d80ccae5da3c33f26550c9618939f62
+Description: comic strip downloader and archiver
+ Dosage downloads comic strips. It can retrieve just the latest
+ strip in a comic, catch-up to the last strip downloaded, or download a
+ strip for a particular date/index if the website layout allows it.
+Homepage: http://dosage.rocks
+Tag: implemented-in::python, interface::commandline, network::client,
+ protocol::http, role::app-data, role::program, use::downloading,
+ works-with::image, works-with::image:raster
+Section: net
+Priority: optional
+Filename: pool/main/d/dosage/dosage_2.15-2_all.deb
+
+Package: dosbox
+Version: 0.74-4.2
+Architecture: armhf
+Maintainer: Jan Dittberner <jandd@debian.org>
+Installed-Size: 2260
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.7), libgcc1 (>= 1:4.4.0), libgl1-mesa-glx | libgl1, libpng12-0 (>= 1.2.13-4), libsdl-net1.2, libsdl-sound1.2 (>= 1.0.1), libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 5.2), libx11-6, zlib1g (>= 1:1.1.4)
+Multi-Arch: foreign
+Homepage: http://www.dosbox.com/
+Priority: optional
+Section: otherosfs
+Filename: pool/main/d/dosbox/dosbox_0.74-4.2_armhf.deb
+Size: 695040
+SHA256: 6b9adc237b9d54a5773b58314b007075e0a2068563cc1f575874c6927ec6114b
+SHA1: e4b8301f31d2b82ff4515186fd0eef2239bd3f21
+MD5sum: 60c07bb6307ae54a9ea7737739ba9db4
+Description: x86 emulator with Tandy/Herc/CGA/EGA/VGA/SVGA graphics, sound and DOS
+ DOSBox is a x86 emulator with Tandy/Hercules/CGA/EGA/VGA/SVGA graphics,
+ sound and DOS. It's been designed to run old DOS games under platforms that
+ don't support it. (Win2k/XP/FreeBSD/Linux/MAC OS X)
+ .
+ The following legacy sound devices are emulated: PC Speaker, Creative
+ CMS/Gameblaster, Tandy 3 voice, Adlib, Sound Blaster Pro/16,
+ Disney Soundsource and a Gravis Ultrasound. MPU-401 is forwarded to the host.
+
+Package: doscan
+Version: 0.3.3-1
+Architecture: armhf
+Maintainer: Florian Weimer <fw@deneb.enyo.de>
+Installed-Size: 80
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libpcre3 (>= 8.10), libstdc++6 (>= 4.9)
+Priority: optional
+Section: net
+Filename: pool/main/d/doscan/doscan_0.3.3-1_armhf.deb
+Size: 39482
+SHA256: 1d8dc34cea3305f44ed75b247b364999912a3f38d6ac32ccc6c101760f7d38b2
+SHA1: 74fdfeb6a191ac86c1d34ff77e6b5dcc0610dd32
+MD5sum: 5305b2e4680ab9f219088d01d3a601d0
+Description: port scanner for discovering services on large networks
+ doscan is a tool to discover TCP services on your network. It is
+ designed for scanning a single ports on a large network.  doscan
+ contacts many hosts in parallel, using standard TCP sockets provided
+ by the operating system.  It is possible to send strings to remote
+ hosts, and collect the banners they return.
+ .
+ There are better tools for scanning many ports on a small set of
+ hosts, for example nmap.
+
+Package: doschk
+Version: 1.1-6
+Architecture: armhf
+Maintainer: Ben Pfaff <pfaffben@debian.org>
+Installed-Size: 49
+Depends: libc6 (>= 2.4)
+Homepage: http://www.gnu.org/software/doschk/
+Priority: optional
+Section: utils
+Filename: pool/main/d/doschk/doschk_1.1-6_armhf.deb
+Size: 8114
+SHA256: 3461dcc68bb10a603a003e3b4dcf1447877916cbbd4a0f0d99f63f871751b69f
+SHA1: 33641ee03bf8eaf2e38022f24d6acb9ee612beb4
+MD5sum: 152012bb056aadde387c0a8fdde68f61
+Description: SYSV and DOS filename conflicts check
+ Checks filenames for conflicts under 14-character SYSV and
+ 8.3 DOS limitations.
+
+Package: dose-builddebcheck
+Source: dose3
+Version: 5.0.1-8
+Architecture: armhf
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Installed-Size: 2624
+Depends: libbz2-1.0, libc6 (>= 2.7), zlib1g (>= 1:1.1.4), xz-utils
+Breaks: dose3-builddebcheck (<< 2.9.13)
+Replaces: dose3-builddebcheck (<< 2.9.13)
+Homepage: http://www.mancoosi.org/software/
+Priority: extra
+Section: devel
+Filename: pool/main/d/dose3/dose-builddebcheck_5.0.1-8_armhf.deb
+Size: 762446
+SHA256: afcaf56f29ec70ab031af698aaf0f8fd40b1c8cf8dae052f7600d46d4e95e5cf
+SHA1: 0012bca72260a352df73b670b257ddbb5cbdbea2
+MD5sum: 5c1a220c90cb90dab9c36f577f80c53a
+Description: Checks whether build-dependencies can be satisfied
+ This software checks, given a collection of source package stanzas
+ and a collection of binary package stanzas of Debian packages, whether
+ the build-dependencies of each source package can be satisfied by the
+ binary packages.
+
+Package: dose-distcheck
+Source: dose3
+Version: 5.0.1-8
+Architecture: armhf
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Installed-Size: 2697
+Depends: libbz2-1.0, libc6 (>= 2.7), librpm3 (>= 4.10.0), librpmio3 (>= 4.10.0), zlib1g (>= 1:1.1.4), xz-utils
+Breaks: dose3-distcheck (<< 2.9.13)
+Replaces: dose3-distcheck (<< 2.9.13)
+Homepage: http://www.mancoosi.org/software/
+Priority: extra
+Section: devel
+Filename: pool/main/d/dose3/dose-distcheck_5.0.1-8_armhf.deb
+Size: 782648
+SHA256: 2f5d0ab7e12489d182fe9fcaf4d0c9a77b2aadfeb9352991ed8840271191afb6
+SHA1: dd2d5e83a308cdd0b534eff567f693512616b7a7
+MD5sum: c0b3ad4f396947b20bd42e5643afbf4f
+Description: Checks whether dependencies of packages can be satisfied
+ This software checks for every package of a distribution whether it
+ is possible to satisfy its dependencies and conflicts within this
+ distribution. It comes in several versions:
+  - dose-debcheck for Debian packages
+  - dose-rpmcheck for rpm packages
+  - dose-eclipsecheck for OSGi plugins
+
+Package: dose-doc
+Source: dose3
+Version: 5.0.1-8
+Installed-Size: 1395
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Architecture: all
+Replaces: apt-cudf (<< 4.3-2), dose-distcheck (<< 4.3-2), libdose3-ocaml-dev (<< 4.3-2)
+Breaks: apt-cudf (<< 4.3-2), dose-distcheck (<< 4.3-2), libdose3-ocaml-dev (<< 4.3-2)
+Size: 93976
+SHA256: b9dd0e569f0509b5b95a31ff1e8df62e863cb5e7c289da5963b0cef32383b1fd
+SHA1: 3098045f5511b6a477b0834b9f1eacfc80153bf0
+MD5sum: 5c7108089bc09381d900ebd45591da12
+Description: Documentation for dose tools and libraries.
+ The dose suite provides libraries for handling package meta-data, and various
+ tools for analyzing package relationships in a large package repository.
+ This package contains the documentation of the dose API, and tutorials of
+ various dose tools.
+Homepage: http://www.mancoosi.org/software/
+Section: doc
+Priority: extra
+Filename: pool/main/d/dose3/dose-doc_5.0.1-8_all.deb
+
+Package: dose-extra
+Source: dose3
+Version: 5.0.1-8
+Architecture: armhf
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Installed-Size: 10554
+Depends: libbz2-1.0, libc6 (>= 2.7), librpm3 (>= 4.10.0), librpmio3 (>= 4.10.0), zlib1g (>= 1:1.1.4), xz-utils
+Breaks: ceve (<< 2.9.10)
+Replaces: ceve (<< 2.9.10)
+Provides: ceve
+Homepage: http://www.mancoosi.org/software/
+Priority: extra
+Section: devel
+Filename: pool/main/d/dose3/dose-extra_5.0.1-8_armhf.deb
+Size: 1392648
+SHA256: 7d5d706738e736b6de4f819ca877de0af8697b18d010b45c98a21adde0a9a48c
+SHA1: 5103148094bda2f8d4e3d2555bd7de570ca222ba
+MD5sum: e57d0673082d3436a7358b78faea7a5b
+Description: Extra QA tools from the Dose3-library
+ This package contains extra tools for analyzing meta-data of software
+ packages:
+  - ceve, a general metadata parser supporting different input formats
+    (Debian, rpm, and others) and different output formats.
+  - dose-outdated, a Debian-specific tool for finding packages that are not
+    installable with respect to a package repository, and that can only be
+    made installable again by fixing the package itself.
+  - dose-challenged, a Debian-specific tool for checking which packages
+    will certainly become uninstallable when some existing package is upgraded
+    to a newer version.
+  - dose-deb-coinstall, a Debian-specific tool for checking whether a set of
+    packages can be installed all together.
+ The tools dose-distcheck and dose-builddebcheck are packaged in their
+ own resepective packages.
+
+Package: dosfstools
+Version: 4.1-1
+Architecture: armhf
+Maintainer: Andreas Bombe <aeb@debian.org>
+Installed-Size: 220
+Depends: libc6 (>= 2.7), libudev1 (>= 183)
+Homepage: https://github.com/dosfstools/dosfstools
+Priority: optional
+Section: otherosfs
+Filename: pool/main/d/dosfstools/dosfstools_4.1-1_armhf.deb
+Size: 91854
+SHA256: 65464c0946ba09aace67e14808553ddd0f69b1c9f803dc2cadf3b74af0fdd5a4
+SHA1: ff194341c6eb45dfcc4e38246e54448add75b990
+MD5sum: 085524543e53c0f52ce7a616f17b4c3f
+Description: utilities for making and checking MS-DOS FAT filesystems
+ The dosfstools package includes the mkfs.fat and fsck.fat utilities, which
+ respectively make and check MS-DOS FAT filesystems.
+
+Package: dossizola
+Version: 1.0-9
+Architecture: armhf
+Maintainer: Yann Dirson <dirson@debian.org>
+Installed-Size: 88
+Depends: libc6 (>= 2.4), libsdl-image1.2 (>= 1.2.10), libsdl1.2debian (>= 1.2.11), dossizola-data (= 1.0-9)

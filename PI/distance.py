@@ -20,18 +20,19 @@ class DigitalShelf():
 
     def set_direction(self):
         # Set GPIO direction (In / Out)
-        for OUT, IN in GPIO_TRIGGER_ECHOs:
+        for OUT, IN in self.GPIO_TRIGGER_ECHOs:
             GPIO.setup(IN, GPIO.IN)
-            GPIO.setup(IN, GPIO.OUT)
+            GPIO.setup(OUT, GPIO.OUT)
 
     def setup_sensors(self, trigger_pin):
         GPIO.output(trigger_pin, GPIO.LOW)
         print('PIN #{} is settled up'.format(trigger_pin))
 
     def distance(self, trigger_pin, echo_pin):
-        GPIO.output(trigger, GPIO.HIGH)
+        GPIO.output(trigger_pin, GPIO.HIGH)
         time.sleep(0.00001)
-        GPIO.output(trigger, GPIO.LOW)
+        GPIO.output(trigger_pin, GPIO.LOW)
+        print('Start measuring distance on PIN {}'.format(trigger_pin))
 
         while GPIO.input(echo_pin) == 0:
             pulse_start = time.time()
@@ -43,3 +44,15 @@ class DigitalShelf():
         GPIO.cleanup()
         print(dist)
         return dist
+
+    def run(self):
+        self.set_direction()
+        
+        '''Setting up a LOW voltage on all sensor triggers'''
+        for trig, echo in self.GPIO_TRIGGER_ECHOs:
+            self.setup_sensors(trig)
+
+        infinite = True
+        while infinite == True:
+            for trig, echo in self.GPIO_TRIGGER_ECHOs:
+                self.distance(trig, echo)
