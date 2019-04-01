@@ -1,5 +1,31 @@
-.jumbotron{
-    background-color: orange;
+body {
+    background-image: url("/static/img/texture.webp");
+    background-color: #cccccc;
+   }
+
+mark {
+    background-color: black;
     color: white;
-    font-weight: 300;
+}
+
+.jumbotron{
+    background-color: rgb(250,180,0);
+    color: white;
+    font-weight: 500;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-color: rgb(240,240,240);
+    border-radius: 10px
+}
+
+.place{
+    color: white;
+}
+
+.top-buffer {
+    margin-top:10%;
 }
