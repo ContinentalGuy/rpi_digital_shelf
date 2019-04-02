@@ -15,7 +15,12 @@ class DigitalShelf():
             (19,20),
             (26, 21)
             ]
-        
+
+        self.GPIO_TRIGGER_ECHOs = [
+            (0,7),
+            (5,1)
+            ]
+
         # Array with distances
         self.distances = []
 
@@ -33,28 +38,23 @@ class DigitalShelf():
         time.sleep(0.00001)
         GPIO.output(trigger_pin, False)
 
+        pulse_start = time.time()
+        pulse_stop = time.time()
+
         while GPIO.input(echo_pin) == 0:
             pulse_start = time.time()
         while GPIO.input(echo_pin) == 1:
             pulse_stop = time.time()
-        
+
         delta = pulse_stop - pulse_start
         dist = round(delta * 17150, 2)
+
         print(dist)
 
         if dist >= self.threshold:
             return 1
         else:
             return 0
-
-    def check_(self):
-        self.set_direction()
-        while True:
-            goods = []
-            for trigger, echo in self.GPIO_TRIGGER_ECHOs:
-                availability = self.distance(trigger, echo)
-                goods.append(availability)
-            return goods
 
     def check(self):
         self.set_direction()
@@ -65,4 +65,6 @@ class DigitalShelf():
                     time.sleep(1)
         except KeyboardInterrupt:
             GPIO.cleanup()
-            
+#        except KeyboardInterrupt as e:
+#            print('Stop')
+#            GPIO.cleanup()
