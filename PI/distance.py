@@ -28,10 +28,6 @@ class DigitalShelf():
             GPIO.setup(IN, GPIO.IN)
             GPIO.setup(OUT, GPIO.OUT)
 
-    def setup_sensors(self, trigger_pin):
-        GPIO.output(trigger_pin, GPIO.LOW)
-        print('PIN #{} is settled up'.format(trigger_pin))
-
     def distance(self, trigger_pin, echo_pin):
         GPIO.output(trigger_pin, True)
         time.sleep(0.00001)
