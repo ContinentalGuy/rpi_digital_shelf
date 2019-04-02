@@ -24,18 +24,18 @@ class DigitalShelf():
 
     def set_direction(self):
         # Set GPIO direction (In / Out)
-        for OUT, IN in GPIO_TRIGGER_ECHOs:
+        for OUT, IN in self.GPIO_TRIGGER_ECHOs:
             GPIO.setup(IN, GPIO.IN)
-            GPIO.setup(IN, GPIO.OUT)
+            GPIO.setup(OUT, GPIO.OUT)
 
     def setup_sensors(self, trigger_pin):
         GPIO.output(trigger_pin, GPIO.LOW)
         print('PIN #{} is settled up'.format(trigger_pin))
 
     def distance(self, trigger_pin, echo_pin):
-        GPIO.output(trigger, GPIO.HIGH)
+        GPIO.output(trigger_pin, True)
         time.sleep(0.00001)
-        GPIO.output(trigger, GPIO.LOW)
+        GPIO.output(trigger_pin, False)
 
         while GPIO.input(echo_pin) == 0:
             pulse_start = time.time()
@@ -51,12 +51,13 @@ class DigitalShelf():
             return 1
         else:
             return 0
-        
-    def __setup(self):
-        self.set_direction()
-        for trig, echo in self.GPIO_TRIGGER_ECHOs:
-            self.setup_sensors(trig)
 
     def check(self):
-        self.__setup()
-        return [self.distance(trig, echo) for trig, echo in self.GPIO_TRIGGER_ECHOs]
+        self.set_direction()
+        while True:
+            goods = []
+            for trigger, echo in self.GPIO_TRIGGER_ECHOs:
+                availability = self.distance(trigger, echo)
+                goods.append(availability)
+            return goods
+            
