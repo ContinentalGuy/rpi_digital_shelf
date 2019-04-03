@@ -10,6 +10,70 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="/static/js/logic.js"></script>
+  <script>
+    function changeColor(slotsNcolors)
+    {
+        for (i=0; i <= slotsNcolors.length; i++)
+        {
+            let square = document.getElementById('s'+i);
+            square.style.backgroundColor = slotsNcolors[i];
+        }
+    };
+
+    function updateColor()
+    {
+        $.ajax({
+            url: '/upd/',
+            method: 'GET',
+            success: function (data)
+                {
+                    debugger;
+                    console.log(data);
+                    //changeColor(data);
+                    return data;
+                },
+            error: function(data)
+                {
+                    console.log('Error')
+                } 
+        })
+        return data;
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("/static/img/texture.webp");
+      background-color: #cccccc;
+    }
+
+    mark {
+        background-color: black;
+        color: white;
+    }
+
+    .jumbotron{
+        background-color: rgb(250,180,0);
+        color: white;
+        font-weight: 500;
+    }
+
+    .square{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: rgb(240,240,240);
+        border-radius: 10px
+    }
+
+    .place{
+        color: white;
+    }
+
+    .top-buffer {
+        margin-top:5%;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -49,6 +113,7 @@
       <div class="square" id='s6'></div>
     </div>
   </div>
+  <div class="row top-buffer"></div>
 </div>
 
 </body>
