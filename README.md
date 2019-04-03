@@ -20,4 +20,4 @@ python3 webserver.py
 7. Look at the result!)
 
 
-![screen](https://raw.githubusercontent.com/ContinentalGuy/rpi_digital_shelf/master/view.png)
+![screen](https://raw.githubusercontent.com/ContinentalGuy/rpi_digital_shelf/master/view.png?token=ATKVbhdZP1S3Vmkf2Q2QJemoZNg4xoSjks5cpNQowA%3D%3D)
