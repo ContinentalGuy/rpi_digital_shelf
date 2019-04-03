@@ -39,8 +39,14 @@
                     console.log('Error')
                 } 
         })
-        return data;
     }
+
+    setInterval(function()
+    {
+        updateColor();
+    },
+    3000
+    );
   </script>
   <style>
     body {
