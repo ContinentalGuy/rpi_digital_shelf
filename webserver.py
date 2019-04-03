@@ -19,13 +19,14 @@ def index():
 
 @app.route('/upd/', methods=['GET'])
 def update_color():
-    sensor_names = ['s1', 's2', 's3', 's4', 's5', 's6']
+    #sensor_names = ['s1', 's2', 's3', 's4', 's5', 's6']
     #sensor_signals = DigitalShelf().check()
     sensor_signals = [0,1,1,0,0,1]
     sensor_signals = list(map(set_color, sensor_signals))
     #print(sensor_signals)
     
-    return jsonify(dict(zip(sensor_names, sensor_signals)))
+    #return jsonify(dict(zip(sensor_names, sensor_signals)))
+    return jsonify(sensor_signals)
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port = 8080, debug=True)
