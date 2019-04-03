@@ -53,7 +53,7 @@ class DigitalShelf():
         delta = pulse_stop - pulse_start
         dist = round(delta * 17150, 2)
 
-        print(dist)
+#        print(dist)
 
         if dist <= self.threshold:
             return 1
@@ -67,5 +67,5 @@ class DigitalShelf():
             distance = self.distance(trigger, echo)
             self.distances.append(distance)
             time.sleep(self.delay)
-        print(self.distances)
+#        print(self.distances)
         return self.distances
