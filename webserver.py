@@ -9,9 +9,9 @@ app = Flask(__name__, static_url_path='/static')
 
 def set_color(int_val):
     if int_val == 0:
-        return 'white'
+        return 'rgb(250, 80, 0)'
     else:
-        return 'rgb(250,80,0)'
+        return 'white'
 
 @app.route('/')
 def index():
