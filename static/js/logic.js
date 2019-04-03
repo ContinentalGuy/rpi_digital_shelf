@@ -2,10 +2,9 @@ function changeColor(slotsNcolors)
 {
     for (i=0; i <= slotsNcolors.length; i++)
     {
-        var square = document.getElementById(slotsNcolors[]);
-        square.style.backgroundColor = 'rgb(255,0,0)';
+        let square = document.getElementById('s'+i);
+        square.style.backgroundColor = slotsNcolors[i];
     }
-    
 };
 
 function updateColor()
@@ -17,7 +16,7 @@ function updateColor()
             {
                 debugger;
                 console.log(data);
-                //changeColor(data);
+                changeColor(data);
                 return data;
             },
         error: function(data)
