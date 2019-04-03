@@ -1,6 +1,7 @@
 function changeColor(slotsNcolors)
 {
-    for (i=0; i <= slotsNcolors.length; i++)
+    var i;
+    for (i=0; i < slotsNcolors.length; i++)
     {
         let square = document.getElementById('s'+i);
         square.style.backgroundColor = slotsNcolors[i];
