@@ -62,13 +62,10 @@ class DigitalShelf():
 
     def check(self):
         self.set_direction()
-        try:
-            while True:
-                for trigger, echo in self.GPIO_TRIGGER_ECHOs:
-                    self.distance(trigger, echo)
-                    time.sleep(self.delay)
-        except KeyboardInterrupt:
-            GPIO.cleanup()
-#        except KeyboardInterrupt as e:
-#            print('Stop')
-#            GPIO.cleanup()
+        self.distances = []
+        for trigger, echo in self.GPIO_TRIGGER_ECHOs:
+            distance = self.distance(trigger, echo)
+            self.distances.append(distance)
+            time.sleep(self.delay)
+        print(self.distances)
+        return self.distances
