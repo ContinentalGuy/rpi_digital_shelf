@@ -3,7 +3,7 @@
 import os
 from flask import Flask, jsonify
 from flask import render_template
-from PI import distance
+#from PI.distance import *
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -14,20 +14,18 @@ def set_color(int_val):
         return 'rgb(250,80,0)'
 
 @app.route('/')
-def cube():
-    infinite = True
-    while infinite == True:
-        # sensor_signals = DigitalShelf().check()
-        # print(sensor_signals)
-        sensor_signals = [0, 1, 0, 0, 1, 0]
-        sensor_signals = list(map(set_color, sensor_signals))
-        print(sensor_signals)
-        return render_template('index.html', index0 = sensor_signals[0], index1 = sensor_signals[1], index2 = sensor_signals[2], index3 = sensor_signals[3], index4 = sensor_signals[4], index5 = sensor_signals[5])
+def index():
+    return render_template('index.html')
 
-
-@app.route('/upd/')
+@app.route('/upd/', methods=['GET'])
 def update_color():
-    return jsonify({'Sensor':'On'})
+    sensor_names = ['s1', 's2', 's3', 's4', 's5', 's6']
+    #sensor_signals = DigitalShelf().check()
+    sensor_signals = [0,1,1,0,0,1]
+    sensor_signals = list(map(set_color, sensor_signals))
+    #print(sensor_signals)
+    
+    return jsonify(dict(zip(sensor_names, sensor_signals)))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port = 8080, debug=True)
