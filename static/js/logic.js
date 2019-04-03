@@ -3,8 +3,9 @@ function changeColor(slotsNcolors)
     var i;
     for (i=0; i < slotsNcolors.length; i++)
     {
-        let square = document.getElementById('s'+i);
-        square.style.backgroundColor = slotsNcolors[i];
+        let counter = i + 1;
+        let squareName = 's' + counter;
+        document.getElementById(squareName).style.backgroundColor = slotsNcolors[i];
     }
 };
 
@@ -25,5 +26,4 @@ function updateColor()
                 console.log('Error')
             } 
     })
-    return data;
 }
