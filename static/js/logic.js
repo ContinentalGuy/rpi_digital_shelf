@@ -1,10 +1,14 @@
-function change_color(id)
+function changeColor(slotsNcolors)
 {
-    var square = document.getElementById(id);
-    square.style.backgroundColor = rgb(255,0,0);
+    for (i=0; i <= slotsNcolors.length; i++)
+    {
+        var square = document.getElementById(slotsNcolors[]);
+        square.style.backgroundColor = 'rgb(255,0,0)';
+    }
+    
 };
 
-function update_color()
+function updateColor()
 {
     $.ajax({
         url: '/upd/',
@@ -12,12 +16,14 @@ function update_color()
         success: function (data)
             {
                 debugger;
-                console.log(data)
-                //change_color(data)
+                console.log(data);
+                //changeColor(data);
+                return data;
             },
         error: function(data)
             {
-                loadOff();
+                console.log('Error')
             } 
     })
+    return data;
 }
