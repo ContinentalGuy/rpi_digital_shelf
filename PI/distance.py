@@ -6,6 +6,12 @@ class DigitalShelf():
         # GPIO Mode (Board / BCM)
         GPIO.setmode(GPIO.BCM)
 
+        # Disable warnings
+        #GPIO.setwarnings(False)
+
+        # Cleanup
+        #GPIO.cleanup()
+
         # Set 6x2 GPIO pins
         self.GPIO_TRIGGER_ECHOs = [
             (0,7),
@@ -18,12 +24,14 @@ class DigitalShelf():
 
         self.GPIO_TRIGGER_ECHOs = [
             (0,7),
-            (5,1)
+            (13,16),
+            (19,20),
+            (26,21)
             ]
 
         # Variable that contains number of
         # seconds delay between each sensor check
-        self.delay = 0.5
+        self.delay = 1
 
         # Array with distances
         self.distances = []
@@ -34,6 +42,7 @@ class DigitalShelf():
     def set_direction(self):
         # Set GPIO direction (In / Out)
         for OUT, IN in self.GPIO_TRIGGER_ECHOs:
+            print('IN: {}, OUT: {}'.format(IN,OUT))
             GPIO.setup(IN, GPIO.IN)
             GPIO.setup(OUT, GPIO.OUT)
 

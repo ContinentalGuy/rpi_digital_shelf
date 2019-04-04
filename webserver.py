@@ -1,4 +1,4 @@
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 #import time
 import os
 from flask import Flask, jsonify
@@ -29,9 +29,9 @@ def update_color():
     #sensor_signals = [0,1,1,0,0,1]
     sensor_signals = list(map(set_color, sensor_signals))
     #print(sensor_signals)
-    
+    #GPIO.cleanup()
     #return jsonify(dict(zip(sensor_names, sensor_signals)))
     return jsonify(sensor_signals)
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port = 8080, debug=True)
+    app.run(host='127.0.0.1', port = 5000, debug=True)
