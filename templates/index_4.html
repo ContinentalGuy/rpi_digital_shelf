@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Digital Shelf</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="/static/js/logic.js"></script>
+  <script>
+    function changeColor(slotsNcolors)
+    {
+        var i;
+        for (i=0; i < slotsNcolors.length; i++)
+        {
+          let counter = i + 1;
+          let squareName = 's' + counter;
+          document.getElementById(squareName).style.backgroundColor = slotsNcolors[i];
+        }
+    };
+
+    function updateColor()
+    {
+        $.ajax({
+            url: '/upd/',
+            method: 'GET',
+            success: function (data)
+                {
+                    debugger;
+                    console.log(data);
+                    changeColor(data);
+                    return data;
+                },
+            error: function(data)
+                {
+                    console.log('Error')
+                } 
+        })
+    }
+
+    setInterval(function()
+    {
+        updateColor();
+    },
+    3000
+    );
+  </script>
+  <style>
+    body {
+      background-image: url("/static/img/texture.webp");
+      background-color: #cccccc;
+    }
+
+    mark {
+        background-color: black;
+        color: white;
+    }
+
+    .jumbotron{
+        background-color: rgb(250,180,0);
+        color: white;
+        font-weight: 500;
+    }
+
+    .square{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: rgb(240,240,240);
+        border-radius: 10px
+    }
+
+    .place{
+        color: white;
+    }
+
+    .top-buffer {
+        margin-top:5%;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Digital Shelf</h1>
+  <p>Цифровой двойник полки</p>
+</div>
+
+<div class="row top-buffer"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3 class='place'><mark>Ячейка 1</mark></h3>
+      <div class="square" id='s1'></div>
+    </div>
+    <div class="col-sm-6">
+      <h3 class='place'><mark>Ячейка 2</mark></h3>
+      <div class="square" id='s2'></div>
+    </div>
+  </div>
+  <div class="row top-buffer"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3 class='place'><mark>Ячейка 3</mark></h3>
+      <div class="square" id='s3'></div>
+    </div>
+    <div class="col-sm-6">
+      <h3 class='place'><mark>Ячейка 4</mark></h3>
+      <div class="square" id='s4'></div>
+    </div>
+  </div>
+  <div class="row top-buffer"></div>
+</div>
+
+</body>
+</html>
